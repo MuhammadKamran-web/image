@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate images using AI with Pollinations.ai. Enter a prompt and let the AI create an image for you.">
+  <title>AI Image Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <h1>Pollinations.ai Image Generator</h1>
+
+    <div class="input-container">
+      <input type="text" id="prompt" placeholder="Enter a prompt (e.g., boy)" aria-label="Enter a prompt to generate an image" />
+      <button id="generateButton" onclick="generateImage()">Generate Image</button>
+    </div>
+
+    <div id="loading" class="loading" style="display:none;">
+      <div class="spinner"></div> Generating image, please wait...
+    </div>
+    <div id="error" class="error" style="display:none;">Error: Unable to generate image. Please try a different prompt.</div>
+    <div id="successMessage" class="success" style="display:none;">Image generated successfully!</div>
+
+    <img id="resultImage" src="" alt="Generated Image" style="display:none;" />
+  </div>
+
+  <footer>
+    <p>Powered by <a href="https://pollinations.ai" target="_blank" rel="noopener noreferrer">Pollinations.ai</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
